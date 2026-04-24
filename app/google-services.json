@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "868038866671",
+    "project_id": "dsm-firebase-auth-ce52d",
+    "storage_bucket": "dsm-firebase-auth-ce52d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868038866671:android:d6a46a7ad03477a49e4d1a",
+        "android_client_info": {
+          "package_name": "com.dsm.firebaseauth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwL8T2LDu_u8I578mAHLRJBujrK0--8h0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
