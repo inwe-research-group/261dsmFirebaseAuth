@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.dsm.firebaseauth.presentacion.initial.InitialScreen
 import com.dsm.firebaseauth.presentacion.login.LoginScreen
+import com.dsm.firebaseauth.presentacion.signup.SignUpScreen
 import com.google.firebase.auth.FirebaseAuth
 
 @Composable
@@ -30,7 +31,7 @@ fun NavigationWrapper(
         }
 
         composable("signUp") {
-            // SignUpScreen()
+            SignUpScreen(auth)
         }
 
         composable("home") {
