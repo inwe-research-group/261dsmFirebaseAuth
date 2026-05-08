@@ -26,62 +26,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun HomeScreen(viewModel: HomeViewModel= HomeViewModel()){
-    val artists: State<List<Artist>> = viewModel.artist.collectAsState()
-
-
-    Column(
-        Modifier
-            .fillMaxSize()
-            .background(Black)
-            .systemBarsPadding(),
-        verticalArrangement= Arrangement.SpaceBetween
-    ){
+fun HomeScreen(){
+    Column(){
         Text(
-            "Popular artist",
-            color=Color.White,
-            fontWeight= FontWeight.Bold,
-            fontSize=30.sp,
-            modifier=Modifier.padding(16.dp)
+            text = "HomeScreen",
         )
-        LazyRow{
-            items(artists.value){
-                ArtistItem(
-                    artist = it,
-                    onItemSelected={}
-                )
-            }
-
-        }
-
-
     }
-
-}
-@Composable
-fun ArtistItem(
-    artist: Artist,
-    onItemSelected: (Artist) -> Unit
-){
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier.clickable { onItemSelected(artist) }
-    ){
-        AsyncImage(
-            modifier = Modifier
-                .size(60.dp)
-                .clip(CircleShape),
-            model= artist.image,
-            contentDescription = "Artists image",
-            contentScale = ContentScale.Crop,
-
-            )
-        Spacer(modifier=Modifier.height(4.dp))
-        Text(
-            text= artist.name.orEmpty(),
-            color=Color.White
-        )
-
-    }
-
 }
