@@ -21,6 +21,7 @@ class HomeViewModel: ViewModel() {
     private var db: FirebaseFirestore = Firebase.firestore
 
     init{
+        //repeat(30){loadData()}
         getArtists()
     }
 
@@ -44,5 +45,16 @@ class HomeViewModel: ViewModel() {
         }//end launch
     }//end function
 
+    //funcion utilitaria
+    private fun loadData(){
+        val random = (1..100).random()
+        val artist= Artist(
+            name="Artist $random",
+            descripcion="Descripcion $random",
+            image="https://www.banderasnews.com/0705/images/shakiramex.jpg"
+        )
+        db.collection("artists").add(artist)
+        Log.i("loadData",artist.toString())
+    }
 
 }
