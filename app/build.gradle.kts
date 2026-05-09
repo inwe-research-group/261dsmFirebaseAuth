@@ -53,6 +53,7 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation("androidx.compose.material:material-icons-core")
     implementation("androidx.compose.material:material-icons-extended")
+    implementation(libs.coil)
 
     // Firebase (BOM controla versiones)
     implementation(platform(libs.firebase.bom))

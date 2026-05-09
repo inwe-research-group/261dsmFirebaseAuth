@@ -29,7 +29,7 @@ class HomeViewModel: ViewModel() {
             db.collection("artists").get().await()
                 .documents.mapNotNull { document ->document.toObject(Artist::class.java) }
         }catch (e: Exception){
-            Log.i("getAllArtists",e.toString())
+            Log.e("getAllArtists","Error al obtener artistas: ${e.message}",e)
             emptyList()
         }
     }
@@ -39,6 +39,7 @@ class HomeViewModel: ViewModel() {
             val result:List<Artist> = withContext(Dispatchers.IO){
                 getAllArtists()
             }
+            Log.d("getAllArtists","Artistas Cargados: ${result.size}")
             _artists.value = result
         }//end launch
     }//end function
