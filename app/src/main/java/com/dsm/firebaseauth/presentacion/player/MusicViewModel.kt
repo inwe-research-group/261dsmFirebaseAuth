@@ -9,7 +9,6 @@ import com.dsm.firebaseauth.model.Song
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-
 class MusicViewModel(
     private val musicRepository: MusicRepository
 ) : ViewModel() {
