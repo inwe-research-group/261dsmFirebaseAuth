@@ -2,6 +2,7 @@ package com.dsm.firebaseauth
 
 import android.app.Application
 import android.util.Log
+import com.dsm.firebaseauth.di.musicModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin
@@ -16,7 +17,7 @@ class FirebaseAuthApp: Application()  {
                 androidLogger(Level.DEBUG)
                 androidContext(this@FirebaseAuthApp)
                 modules(
-                    //appModule
+                    musicModule
                 )
             }
 

@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import com.dsm.firebaseauth.presentacion.home.HomeScreen
 import com.dsm.firebaseauth.presentacion.initial.InitialScreen
 import com.dsm.firebaseauth.presentacion.login.LoginScreen
+import com.dsm.firebaseauth.presentacion.player.MusicScreen
 import com.dsm.firebaseauth.presentacion.signup.SignUpScreen
 import com.google.firebase.auth.FirebaseAuth
 
@@ -37,7 +38,7 @@ fun NavigationWrapper(
         }
 
         composable("home") {
-            HomeScreen()
+            MusicScreen()
         }
     }
 }
